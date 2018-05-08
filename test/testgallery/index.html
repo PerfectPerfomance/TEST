@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Галерея</title>
+	<link rel="stylesheet"  href="css/style.css">
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js">
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+	$(document).ready(function(){
+
+		$("h2").append('<em></em>');
+		$('.thumbs a').click(function() {
+			
+			var largePath = $(this).attr("href");
+			var largeAlt = $(this).attr("title");
+
+			$("#largeImg").attr({ src: largePath, alt: largeAlt});
+			$("h2 em").html("(" + largeAlt + ")"); return false;
+		});
+	});
+</script>
+	<h2>Illustrations</h2>
+	<p><img id="largeImg" src="images/img1.jpg" alt="Large image" /></p>
+	<p class="thumbs">
+		<a href="images/img1.jpg" title="Image 1"><img src="images/img1.jpg"></a>
+		<a href="images/img2.jpg" title="Image 2"><img src="images/img2.jpg"></a>
+		<a href="images/img3.jpg" title="Image 3"><img src="images/img3.jpg"></a>
+		<a href="images/img4.jpg" title="Image 4"><img src="images/img4.jpg"></a>
+		<a href="images/img5.jpg" title="Image 5"><img src="images/img5.jpg"></a>
+		<a href="images/img6.jpg" title="Image 6"><img src="images/img6.jpg"></a>
+	</p>
+
+
+	
+</body>
+</html>

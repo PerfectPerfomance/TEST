@@ -1,0 +1,60 @@
+/*.l-grad{
+	height: 400px;
+	background: linear-gradient(45deg, #000, red, #000);
+}*/
+.r-grad{
+	height: 200px;
+	background: radial-gradient(blue, #000);
+}
+.animation{
+	height: 300px;
+	background: green;
+}
+
+.animation:hover{
+	height: 300px;
+	background: red;
+}
+.animationtt{
+	height: 300px;
+	background: green;
+	transition-timing-function: linear;
+	transition-duration: 3s;
+}
+
+.animationtt:hover{
+	height: 300px;
+	background: red;
+}
+
+
+.progress{
+	margin:10%;
+	background: #333;
+	border: 3px solid #333;
+	height: 40px;
+	position: relative;
+}
+
+	.progress:hover::before {
+		width: 100%;
+	}
+	.progress::before{
+		transition-timing-function: linear;
+		transition-duration: 0.1s;
+		content: '';
+		position: absolute;
+		height: 100%; width: 0;
+		background: red;
+	}
+.shadow{
+
+	width: 400px;
+	height: 400px;
+	background: yellow;
+	margin: 50px auto;
+	box-shadow: 20px 20px 20px ; /*реалистичные ТЕНИ сайт генератора теней css3gen.com/box/shadow/*/
+
+}
+
+ 

@@ -1,0 +1,243 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+}
+.test{
+	font-size: 18px;
+	color: red;
+	background: #ccc;
+}
+.test:hover{
+	font-size: 40px;
+	background: black;
+	color:blue;
+}
+.test:hover>span{
+color:yellow;
+font-size: 56px;
+}
+	.testmenu {
+	text-align: center;
+	
+}
+	.testmenu>li{
+	display: inline-block;
+	background: rgba(255,0,255,0.5);
+	position: relative;
+}
+ .testmenu span{
+ 	background: #ffffff url(../img/sprite.png) no-repeat;
+ 	display: block;
+ 	width: 63px;
+ 	height: 63px;
+ 	position: absolute;
+ 	top:0;
+ 	left:0;
+ }
+ .testmenu li:hover span{
+ 	background-position: 0 -63px;
+ }
+
+
+	.testmenu>li:hover{
+		background: rgba(255,0,255,0.8);
+
+
+	}
+	
+	.testmenu>li>a{
+	padding: 2px 8px 46px 64px;
+	display: block;
+	color: red;
+	text-decoration: none;
+	position: relative;
+	background: #4065b5;
+	}
+	.testmenu>li:hover>a{
+		background: #ffffff;
+	}
+
+	.testmenu>li>ul{
+		position: absolute;
+		display: none;
+		left: 0;
+		padding: -left 0;
+		}
+	.testmenu>li:hover>ul{
+			display: block;
+	}
+	.testmenu>li>ul>li{
+		display: block;
+		margin: 10px 0;
+	}
+  	/* html and body растянул на весь контент 100% тогда контент минимум будет 100%*/
+  	html, body {
+  		height: 100%;
+  	}
+  	#content{
+  		width: 1200px;
+  		background: #ccc;
+  		min-width: 100%;
+  		height: auto !important;/*кросбраузерность*/
+  		height: 100%; 
+  		margin: 0 auto -50px;
+  		box-sizing: border-box;;
+  		}
+
+.mytable td{
+	padding: 30px;
+	border: 1px solid blue;
+
+}
+
+
+.bgtest{
+	background-image: url(../img/images.jpg);
+	padding-bottom: 800px;
+	background-size: cover; /*замастить весь блок*/
+	background-position: center;
+}
+.footer ul li a{
+	display: block;
+	padding: 32px;
+	background:url(../img/sprite.png);
+	background-position: 0 -63px;
+	transition:all .5s ease;
+
+}
+/*спрайт создается общее полотно изображение, оно вставляется в элемент,
+двигается бекграундом посишен с отрицательным х у чтобы попала в квадратик 1 единственное
+положение*/
+
+.footer ul li{
+	display: inline-block;
+
+}
+.footer ul li+li a{
+	background-position: -0px 0px;
+}
+
+.footer ul li+li a{
+	background-position: -63px -63px;
+}
+.footer ul li+li+li a{
+	background-position: -126px -63px;
+}
+.footer ul li+li+li+li a{
+	background-position: -189px -63px;
+}
+.footer ul li+li+li+li+li a{
+	background-position: -252px -63px;
+}
+.footer ul li+li+li+li+li+li a{
+	background-position: -315px -63px;
+}
+
+
+.footer ul li:hover a{
+	background-position: 0px 0px;
+}
+
+.footer ul li+li:hover a{
+	background-position: -63px 0px;
+}
+.footer ul li+li+li:hover a{
+	background-position: -126px 0px;
+}
+.footer ul li+li+li+li:hover a{
+	background-position: -189px 0px;
+}
+.footer ul li+li+li+li+li:hover a{
+	background-position: -252px 0px;
+}
+.footer ul li+li+li+li+li+li:hover a{
+	background-position: -315px 0px;
+}
+
+.trans_testo{
+	transition: all 1s linear;
+
+}
+ .trans_testo:hover{
+ 	transform: rotateY(-360deg);
+ }
+ .trans_testt{
+	transition: all 1s linear;
+
+}
+ .trans_testt:hover{
+ 	transform: rotateX(-360deg);
+ }
+  .trans_testf{
+	transition: all 1s linear;
+
+}
+ .trans_testf:hover{
+ 	transform: rotateX(-360deg) rotateY(-360deg) rotateZ(-360deg);
+ }
+  
+ .trans_testc{
+	transition: all 1s linear;
+
+}
+ .trans_testc:hover{
+ 	transform: scale(-1);
+ }
+ .img_wrap{
+ 	width: 300px;
+ 	height: 500px;
+ 	overflow: hidden;
+ 	margin: auto;
+ }
+ .img_wrap:hover{
+ 	transition: all 0.2s linear;
+ 	transform: scale(3);
+ }
+  .trans_teste{
+	transition: all 0.2s linear;
+
+}
+ .trans_teste:hover{
+ 	transform: translate(700px);
+ }
